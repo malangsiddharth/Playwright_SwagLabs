@@ -16,7 +16,7 @@ cd D:\Automation\Palywright_SwagLabsFinal
 npm install
 npx playwright install
 
-Environment
+## Environment
 Create .env in repo root (example already present):
 
 BASE_URL=https://www.saucedemo.com/
@@ -39,7 +39,7 @@ npx cucumber-js [checkOut.feature](http://_vscodecontentref_/2) --format html:cu
 
 After run, open the generated cucumber-report.html (project root).
 
-Project Structure (important files)
+3.Project Structure (important files)
 features/
 checkOut.feature
 stepDefinations/CheckOutSteps.js
@@ -57,15 +57,11 @@ Common Scripts (package.json)
 npm test — run testRunner (recommended)
 npm run cucumber — direct cucumber run (if defined)
 npm run bddgen — if bddgen is used in this repo
-Troubleshooting
-MODULE_NOT_FOUND: verify require paths and file/folder casing (PowerShell Get-ChildItem).
-Unexpected token export / ES module errors: convert ES exports to CommonJS (module.exports) or set "type": "module" in package.json and adapt requires/imports.
-Cannot read properties of undefined (reading 'goToApplication'): ensure PageObjectManager is initialized in Before hook and assigned to this.HomePage.
-X is not a constructor: inspect page module exports; PageObjectManager expects a constructor. Ensure page files export constructors (module.exports = ClassName).
-Screenshots: failure screenshots saved as failure-<timestamp>.png in project root and attached to report.
-Commands to inspect modules:
 
-Notes & Recommendations
+
+4.Screenshots: failure screenshots saved as failure-<timestamp>.png in project root and attached to report.
+
+5.Notes & Recommendations
 Keep all selectors inside page objects; steps should call page object methods.
 Use this (Cucumber World) to share page and page objects across steps.
 Run with headless: false in hooks while debugging to see browser actions.
